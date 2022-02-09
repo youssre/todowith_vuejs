@@ -29,7 +29,7 @@
       </div>
     </div>
 
-    <div class="container">
+    <div class="container content">
       <div v-for="item in list" :key="item.id">
         <div class="card my-2  mx-auto">
           <div class="card-body d-flex justify-content-between align-items-center">
@@ -98,18 +98,23 @@ export default {
     margin: auto;
     
   }
-  @media only screen and (min-width: 1000px) {
+  .content{
+    max-height: 200px;
+    overflow-y: scroll;
+    scrollbar-width: none;
+  }
+  @media only screen and (min-width: 900px) {
   .shape {
     width: 40%;
   }
 }
-  @media only screen and (min-width: 500px) {
+  @media only screen and (max-width: 900px) and (min-width: 500px) {
     .shape {
-      width: 60%;
+      width: 70%;
     }
     
   }
-  @media only screen and (min-width: 300px) {
+  @media only screen and (max-width: 500px) and (min-width: 300px) {
     .shape {
       width: 80%;
     }
